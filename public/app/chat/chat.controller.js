@@ -52,7 +52,7 @@ app.controller('ChatController', function ($scope, $location, $timeout) {
     }, 0, false);
   }
 
-    //send notification function
+  //send notification function
   let sendNotification =(user, msg)=>{
     if (Notification.permission === 'granted') {
       let notification = new Notification(user + msg, {

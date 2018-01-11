@@ -23,7 +23,7 @@ let users = [];
 io.on('connection', function(socket){
 	socket.on('connUser', function(data,status){
 		let userExist = users.filter(function(item) { return item.nickname === data.nickname; });
-	  	if(!userExist){ //user already logged in
+	  	if(userExist.length){ //user already logged in
 	  		status({status:false});
 	  	} else{
 	  		socket.nickname = data.nickname;
