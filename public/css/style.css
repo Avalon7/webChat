@@ -96,6 +96,9 @@ body {
   color: #75b1e8;
 }
 
+.chat .chat-history ul{
+  list-style: none;
+}
 
 .online {
   color: #86BB71;
