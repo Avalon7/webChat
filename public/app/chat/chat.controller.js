@@ -1,4 +1,4 @@
-app.controller('ChatController', function ($scope, $location, $timeout) {
+app.controller('ChatController', function ($scope, $location, $timeout, $document) {
 
   let messages = {};
   $scope.mynickname = nickname;
@@ -47,7 +47,8 @@ app.controller('ChatController', function ($scope, $location, $timeout) {
 
   $scope.scrollToBottom = function(){
     $timeout(function() {
-      let scroller = document.getElementById("chat-data");
+      let scroller = $document[0].getElementById("chat-data");
+      // let scroller = document.getElementById("chat-data");
       scroller.scrollTop = scroller.scrollHeight;
     }, 0, false);
   }
